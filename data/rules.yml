@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: handle ticket query
+  steps:
+  - intent: book_ticket
+  - action: action_ticket_response
+
+- rule: handle drink query
+  steps:
+  - intent: book_drinks
+  - action: action_drink_response
